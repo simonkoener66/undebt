@@ -19,9 +19,7 @@ def process(patterns, text):
 
             find_and_replace = create_find_and_replace(grammar, replace)
             results = parse_grammar(find_and_replace, text)
-            if not results:
-                break
-            else:
+            if results:
                 found.append(len(results))
                 text = _transform_results(results, text)
 
